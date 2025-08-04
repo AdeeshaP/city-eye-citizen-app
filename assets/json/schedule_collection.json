@@ -1,0 +1,72 @@
+{
+  "collections": [
+    {
+      "date": "Wed 30 July",
+      "time": "11:30 AM to 1:30 PM",
+      "location": "Wellawaththa",
+      "types": [
+        "Organic Waste"
+      ]
+    },
+    {
+      "date": "Mon 04 August",
+      "time": "8:30 AM to 10:30 AM",
+      "location": "Kirulapone",
+      "types": [
+        "Polythene"
+      ]
+    },
+    {
+      "date": "Fri 08 August",
+      "time": "11:30 AM to 1:30 PM",
+      "location": "Kollupitiya",
+      "types": [
+        "Glass",
+        "Organic Waste"
+      ]
+    },
+    {
+      "date": "Fri 15 August",
+      "time": "2:30 PM to 3:30 PM",
+      "location": "Union Place",
+      "types": [
+        "Organic Waste"
+      ]
+    },
+    {
+      "date": "Thu 21 August",
+      "time": "9:30 AM to 10:30 AM",
+      "location": "Bambalapitiya",
+      "types": [
+        "Plastic",
+        "Polythene"
+      ]
+    },
+    {
+      "date": "Mon 25 August",
+      "time": "2:30 PM to 3:30 PM",
+      "location": "Cinnamon Gardens",
+      "types": [
+        "Polythene",
+        "Organic Waste"
+      ]
+    },
+    {
+      "date": "Tue 02 September",
+      "time": "4:30 PM to 5:30 PM",
+      "location": "Borella",
+      "types": [
+        "Organic Waste",
+        "Glass"
+      ]
+    },
+    {
+      "date": "Sat 06 September",
+      "time": "8:30 AM to 10:30 AM",
+      "location": "Slave Island",
+      "types": [
+        "Organic Waste"
+      ]
+    }
+  ]
+}
