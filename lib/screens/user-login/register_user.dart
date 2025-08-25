@@ -202,7 +202,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                                   _isPasswordVisible
                                       ? Icons.visibility
                                       : Icons.visibility_off,
-                                  color: primaryPurpleColor,
+                                  color: AppColors.ternary.withOpacity(0.9),
                                 ),
                                 onPressed: () {
                                   setState(() {
@@ -325,11 +325,11 @@ class _RegisterScreenState extends State<RegisterScreen>
         validator: validator,
         decoration: InputDecoration(
           filled: true,
-          fillColor: primaryPurpleColor.withOpacity(0.1),
+          fillColor: Colors.grey.withOpacity(0.1),
           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
           labelText: label,
           labelStyle: TextStyle(color: Color(0xFF757575)),
-          prefixIcon: Icon(prefixIcon, color: primaryPurpleColor),
+          prefixIcon: Icon(prefixIcon, color: AppColors.ternary.withOpacity(0.9)),
           suffixIcon: suffixIcon,
           // enabledBorder: OutlineInputBorder(
           //   borderRadius: BorderRadius.circular(8),
@@ -344,7 +344,7 @@ class _RegisterScreenState extends State<RegisterScreen>
             borderRadius: BorderRadius.circular(12),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Color.fromARGB(255, 0, 1, 10)),
+            borderSide: BorderSide(color: AppColors.primary.withOpacity(0.8)),
             borderRadius: BorderRadius.circular(12),
           ),
         ),

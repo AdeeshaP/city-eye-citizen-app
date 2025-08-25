@@ -514,7 +514,7 @@ class _ReportIssueScreenState extends State<ReportIssueScreen> {
                                               strokeWidth: 2,
                                               valueColor:
                                                   AlwaysStoppedAnimation<Color>(
-                                                      primaryPurpleColor),
+                                                      AppColors.primary),
                                             ),
                                           ),
                                         )

@@ -8,6 +8,7 @@ class CityService {
   final String category;
   final String status;
   final String description;
+  final String authority;
 
   CityService({
     required this.serviceName,
@@ -17,6 +18,7 @@ class CityService {
     required this.category,
     required this.status,
     required this.description,
+    required this.authority,
   });
 
   factory CityService.fromJson(Map<String, dynamic> json) {
@@ -28,6 +30,7 @@ class CityService {
       category: json['category'] ?? '',
       status: json['status'] ?? '',
       description: json['description'] ?? '',
+      authority: json['authority'] ?? '',
     );
   }
 }

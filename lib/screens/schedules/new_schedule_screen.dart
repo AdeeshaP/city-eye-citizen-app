@@ -4,7 +4,6 @@ import 'package:city_eye_citizen_app/models/city_service.dart';
 import 'package:city_eye_citizen_app/models/schedule.dart';
 import 'package:city_eye_citizen_app/screens/notifications/notifications.dart';
 import 'package:city_eye_citizen_app/screens/schedules/next_collection_day_screen.dart';
-import 'package:city_eye_citizen_app/screens/schedules/services_schedule_details.dart';
 import 'package:city_eye_citizen_app/screens/schedules/waste_schedule_details.dart';
 import 'package:city_eye_citizen_app/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +41,7 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
     'Infrastructure',
     'Public Safety',
     'Environmental',
+    'Bribery and Corruption',
     'Utilities'
   ];
 
@@ -102,39 +102,73 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
         allCityServices = [
           CityService(
             serviceName: "Traffic Signal Maintenance",
-            date: "10 June",
+            date: "10 Aug",
             time: "9:00 AM to 11:00 AM",
             location: "Galle Road Junction",
             category: "Traffic Management",
             status: "Scheduled",
             description: "Regular maintenance of traffic signals",
+            authority: "Road Development Authority",
           ),
           CityService(
             serviceName: "Street Light Repair",
-            date: "11 June",
+            date: "11 Aug",
             time: "7:00 PM to 9:00 PM",
             location: "Marine Drive",
             category: "Infrastructure",
             status: "In Progress",
             description: "Replacing faulty street light bulbs",
+            authority: "Electricity Board",
           ),
           CityService(
             serviceName: "Road Cleaning",
-            date: "13 June",
+            date: "10 Aug",
             time: "6:00 AM to 8:00 AM",
             location: "Colombo City Center",
             category: "Environmental",
             status: "Scheduled",
             description: "Weekly road cleaning service",
+            authority: "Municipal Council",
           ),
           CityService(
             serviceName: "Water Supply Maintenance",
-            date: "14 June",
+            date: "14 Aug",
             time: "10:00 AM to 2:00 PM",
             location: "Bambalapitiya",
             category: "Infrastructure",
             status: "Scheduled",
             description: "Scheduled water line maintenance",
+            authority: "Water Board",
+          ),
+          CityService(
+            serviceName: "Arrest ",
+            date: "Every Day",
+            time: "Anytime",
+            location: "Department of Motor Traffic",
+            category: "Bribery and Corruption",
+            status: "Scheduled",
+            description: "24x7 Responsive Service",
+            authority: "Bribery Commission",
+          ),
+          CityService(
+            serviceName: "Fix New Street Lights",
+            date: "12 Aug",
+            time: "10:00 AM to 12:00 PM",
+            location: "Marine Drive",
+            category: "Public Safety",
+            status: "Scheduled",
+            description: "Need to fix new street lamps for dark areas.",
+            authority: "Road Development Authority",
+          ),
+          CityService(
+            serviceName: "Arrest Criminals",
+            date: "Every Day",
+            time: "Anytime",
+            location: "Anywhere in CMC area",
+            category: "Public Safety",
+            status: "Scheduled",
+            description: "24x7 Responsive Service",
+            authority: "Sri Lanka Police, CID",
           ),
         ];
       });
@@ -471,7 +505,8 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
                           runSpacing: 4,
                           children: collection.types.map((type) {
                             // Color chipColor = _getGarbageTypeColor(type);
-                            Color chipColor = AppColors.secondary.withOpacity(0.1);
+                            Color chipColor =
+                                AppColors.secondary.withOpacity(0.1);
 
                             return Container(
                               padding: EdgeInsets.symmetric(
@@ -728,6 +763,14 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
                           ),
                         ),
                         SizedBox(height: 4),
+                        Text(
+                          'Authority - ${service.authority}',
+                          style: TextStyle(
+                            color: Colors.grey.shade600,
+                            fontSize: 14,
+                          ),
+                        ),
+                        SizedBox(height: 4),
                         Row(
                           children: [
                             Container(
@@ -880,20 +923,20 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
     return a.year == b.year && a.month == b.month && a.day == b.day;
   }
 
-  Color _getGarbageTypeColor(String type) {
-    switch (type) {
-      case 'Plastic':
-        return Color.fromARGB(255, 192, 145, 4);
-      case 'Organic Waste':
-        return Color.fromARGB(255, 42, 152, 2);
-      case 'Polythene':
-        return Color.fromARGB(255, 240, 21, 21);
-      case 'Glass':
-        return Color.fromARGB(255, 9, 85, 237);
-      default:
-        return Colors.grey;
-    }
-  }
+  // Color _getGarbageTypeColor(String type) {
+  //   switch (type) {
+  //     case 'Plastic':
+  //       return Color.fromARGB(255, 192, 145, 4);
+  //     case 'Organic Waste':
+  //       return Color.fromARGB(255, 42, 152, 2);
+  //     case 'Polythene':
+  //       return Color.fromARGB(255, 240, 21, 21);
+  //     case 'Glass':
+  //       return Color.fromARGB(255, 9, 85, 237);
+  //     default:
+  //       return Colors.grey;
+  //   }
+  // }
 
   IconData _getCategoryIcon(String category) {
     switch (category) {
@@ -945,7 +988,8 @@ class _CitySchedulesScreenState extends State<CitySchedulesScreen>
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: Text('Close', style: TextStyle(color: AppColors.secondary)),
+              child:
+                  Text('Close', style: TextStyle(color: AppColors.secondary)),
             ),
           ],
         );

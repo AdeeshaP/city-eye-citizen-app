@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 _isPasswordVisible
                                     ? Icons.visibility
                                     : Icons.visibility_off,
-                                color: primaryPurpleColor,
+                                color: AppColors.ternary.withOpacity(0.9),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -311,9 +311,9 @@ class _LoginScreenState extends State<LoginScreen>
       decoration: InputDecoration(
         labelText: label,
         filled: true,
-        fillColor: primaryPurpleColor.withOpacity(0.1),
+        fillColor: Colors.grey.withOpacity(0.1),
         labelStyle: TextStyle(color: Color(0xFF757575)),
-        prefixIcon: Icon(prefixIcon, color: primaryPurpleColor),
+        prefixIcon: Icon(prefixIcon, color: AppColors.ternary.withOpacity(0.9)),
         suffixIcon: suffixIcon,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
@@ -324,7 +324,7 @@ class _LoginScreenState extends State<LoginScreen>
           borderRadius: BorderRadius.circular(12),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: const Color.fromARGB(255, 0, 1, 10)),
+          borderSide: BorderSide(color: AppColors.primary.withOpacity(0.8)),
           borderRadius: BorderRadius.circular(12),
         ),
         contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
